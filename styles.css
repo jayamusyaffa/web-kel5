@@ -1,0 +1,554 @@
+/* --- Global Styles & Typography --- */
+body {
+    font-family: 'Georgia', serif; /* Mengganti font yang lebih klasik/keraton */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f7f7f7; /* Latar belakang abu-abu muda */
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    color: #4a148c; /* Warna ungu tua/keemasan untuk kesan megah */
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #ffb300; /* Garis emas di bawah judul */
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+section {
+    padding: 60px 5%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: #880e4f; /* Warna marun/ungu tua */
+    color: white;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ffecb3; /* Warna emas muda */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+}
+
+nav ul li a:hover {
+    color: #ffb300; /* Emas saat di-hover */
+    border-bottom: 2px solid #ffb300;
+}
+
+/* --- Hero Section (The Main Banner) --- */
+#hero {
+    background: url('asset/sesajen.jpg') no-repeat center center/cover; /* Ganti dengan gambar ikonik Jawa yang sesuai */
+    color: white;
+    text-align: center;
+    padding: 150px 5%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 0; /* Menghilangkan border radius pada hero */
+    box-shadow: none;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay gelap agar teks terbaca */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: #ffb300; /* Judul Hero warna emas */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+.hero-content button {
+    background-color: #ffb300;
+    color: #4a148c;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    font-weight: bold;
+}
+
+.hero-content button:hover {
+    background-color: #ffcc5c;
+    transform: translateY(-2px);
+}
+
+/* --- History Section --- */
+#history {
+    text-align: center;
+}
+
+.history-details {
+    margin-top: 30px;
+}
+
+.history-details ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.history-details ul li {
+    background: #fff8e1; /* Latar belakang kuning muda */
+    padding: 20px;
+    border-left: 4px solid #ffb300;
+    margin: 15px;
+    max-width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+.history-details ul li strong {
+    color: #880e4f;
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* --- Philosophy Section --- */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.philo-item {
+    background-color: #e8eaf6; /* Latar belakang biru muda */
+    padding: 25px;
+    border-radius: 8px;
+    border-top: 5px solid #4a148c;
+    transition: transform 0.3s ease;
+}
+
+.philo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.philo-item h3 {
+    color: #4a148c;
+    margin-top: 0;
+}
+
+.philo-item em {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #6a6a6a;
+    border-left: 2px solid #ccc;
+    padding-left: 10px;
+}
+
+/* --- Traditions Section --- */
+.tradition-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+}
+
+.tradition {
+    max-width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.tradition:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tradition img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.tradition h3 {
+    color: #880e4f;
+    padding: 10px 15px 5px;
+}
+
+.tradition p {
+    padding: 0 15px 15px;
+    font-size: 0.95em;
+}
+
+/* --- Figures Section --- */
+.figures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.figure {
+    padding: 20px;
+    border: 1px dashed #4a148c;
+    border-radius: 8px;
+    background-color: #fce4ec; /* Pink muda */
+}
+
+.figure img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #880e4f;
+    margin-bottom: 15px;
+}
+
+/* --- Features Section --- */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.feature {
+    background-color: #e3f2fd; /* Biru sangat muda */
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.feature:hover {
+    background-color: #bbdefb;
+}
+
+.feature img {
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    color: #1565c0;
+}
+
+/* --- Gallery Section --- */
+#gallery {
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Timeline Section --- */
+.timeline-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #ffb300;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background: inherit;
+    width: 45%;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+    border-right: 3px solid #4a148c;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+    border-left: 3px solid #4a148c;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -10px;
+    background-color: #880e4f;
+    border: 4px solid #ffb300;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -10px;
+}
+
+.timeline-item h3 {
+    margin-top: 0;
+    color: #4a148c;
+}
+
+/* --- Quiz Section --- */
+#quiz {
+    text-align: center;
+    background-color: #fce4ec; /* Latar belakang pink muda */
+}
+
+#quiz-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    border: 2px solid #880e4f;
+    border-radius: 10px;
+}
+
+.question p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #880e4f;
+}
+
+.question button {
+    background-color: #ffb300;
+    color: #4a148c;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.question button:hover {
+    background-color: #ffcc5c;
+}
+
+.correct {
+    background-color: #4CAF50 !important; /* Hijau */
+    color: white !important;
+}
+
+.incorrect {
+    background-color: #f44336 !important; /* Merah */
+    color: white !important;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* --- Testimonials Section --- */
+#testimonials {
+    text-align: center;
+    background-color: #fff8e1; /* Latar belakang kuning muda */
+}
+
+.testimonial {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border-left: 5px solid #ffb300;
+    font-style: italic;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* --- CTA Section --- */
+#cta {
+    text-align: center;
+    background-color: #880e4f;
+    color: white;
+}
+
+#cta h2 {
+    color: white;
+}
+
+#cta h2::after {
+    background-color: #ffb300;
+}
+
+#cta p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+#cta input[type="email"] {
+    padding: 10px;
+    width: 60%;
+    max-width: 300px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#cta button[type="submit"] {
+    background-color: #ffb300;
+    color: #4a148c;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#cta button[type="submit"]:hover {
+    background-color: #ffcc5c;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #4a148c;
+    color: #ffecb3;
+    text-align: center;
+    padding: 25px 5%;
+    font-size: 0.9em;
+}
+
+/* --- Responsiveness (Tambahan) --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .timeline-container::before {
+        left: 18px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 10px;
+        left: 0 !important;
+        text-align: left !important;
+        border-right: none !important;
+        border-left: 3px solid #4a148c !important;
+    }
+
+    .timeline-item::after {
+        left: 11px !important;
+    }
+}
